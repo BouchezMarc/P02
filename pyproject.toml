@@ -1,0 +1,14 @@
+[project]
+name = "test-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "dotenv>=0.9.9",
+    "huggingface-hub>=1.1.4",
+    "matplotlib>=3.10.7",
+    "numpy>=2.3.5",
+    "pillow>=12.0.0",
+    "requests>=2.32.5",
+]
