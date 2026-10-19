@@ -10,12 +10,13 @@
 # ///
 
 import requests as req
-import PIL as pillow
-#import pil
+import PIL as Image
 import numpy as np 
 import matplotlib as mpl
-#import dotenv as dotenv
 from dotenv import dotenv_values
+from transformers import SegformerImageProcessor, AutoModelForSemanticSegmentation
+import torch.nn as nn
+
 
 import os
 from huggingface_hub import InferenceClient
@@ -47,3 +48,25 @@ completion = client.chat.completions.create(
 )
 
 print(completion.choices[0].message)
+
+
+# processor = SegformerImageProcessor.from_pretrained("sayeed99/segformer_b3_clothes")
+# model = AutoModelForSemanticSegmentation.from_pretrained("sayeed99/segformer_b3_clothes")
+
+# url = "https://plus.unsplash.com/premium_photo-1673210886161-bfcc40f54d1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29uJTIwc3RhbmRpbmd8ZW58MHx8MHx8&w=1000&q=80"
+
+# image = Image.open(req.get(url, stream=True).raw)
+# inputs = processor(images=image, return_tensors="pt")
+
+# outputs = model(**inputs)
+# logits = outputs.logits.cpu()
+
+# upsampled_logits = nn.functional.interpolate(
+#     logits,
+#     size=image.size[::-1],
+#     mode="bilinear",
+#     align_corners=False,
+# )
+
+# pred_seg = upsampled_logits.argmax(dim=1)[0]
+# mpl.imshow(pred_seg)
