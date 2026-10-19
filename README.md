@@ -120,11 +120,11 @@ Pour réaliser une évaluation quantitative, il faut disposer de masques de réf
 Une démarche complète consiste à séparer les données en jeux d'entraînement, de validation et de test. Dans ce projet d'initiation, le modèle est déjà entraîné et utilisé via une API : l'objectif principal est donc de tester ses prédictions sur un jeu d'images et d'analyser les résultats, plutôt que de réentraîner le modèle.
 
 ## Résultats :
-IoU moyen : 0.9374
-F1 Score moyen : 0.9677
+- IoU moyen : 0.9374
+- F1 Score moyen : 0.9677
 
 ### Constat :
-Bon résultat du modèle, par contre, il ya  des problèmes de reconnaissance de lattéralité et sur lors de la superposition de membre.
+Bon résultat du modèle, par contre, il ya  des problèmes de reconnaissance de lattéralité et lors de la superposition de membre.
 
 ## Points de vigilance
 
